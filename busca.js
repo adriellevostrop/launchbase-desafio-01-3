@@ -5,7 +5,9 @@ const usuarios = [
 ];
 
 usuarios.forEach(function(valor, indice) {
-    console.log(`${usuarios[indice].nome} ${checaSeUsuarioUsaCSS(usuarios[indice]) ? "" : "não "}trabalha com CSS`);
+    if (checaSeUsuarioUsaCSS(usuarios[indice])) {
+        console.log(`${usuarios[indice].nome} trabalha com CSS`);
+    }
 })
 
 function checaSeUsuarioUsaCSS(usuario) {
